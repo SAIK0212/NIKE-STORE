@@ -1,0 +1,180 @@
+.placeorder {
+  margin-top: 40px;  /* ✅ Add this line for gap below navbar */
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  border-top: 2px solid #333;
+  gap: 40px;
+  margin-bottom: 50px;
+  background: #0b0b0b;
+  color: #fff;
+  padding: 3rem 2rem;
+  border-radius: 30px;
+  animation: fadeUp 1s ease forwards;
+}
+
+
+@media screen and (min-width: 640px) {
+  .placeorder {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.placeorder-left {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  max-width: 480px;
+  opacity: 0;
+  animation: fadeUpLeft 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.placeorder-title {
+  font-size: 1.5rem;
+  margin: 12px 0;
+  color: #fff;
+}
+
+.placeorder-names,
+.placeorder-citystate,
+.placeorder-zipcountry {
+  display: flex;
+  gap: 12px;
+}
+
+.placeorder-input {
+  background: #111;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.placeorder-input:focus {
+  outline: none;
+  border-color: #f43f5e;
+  box-shadow: 0 0 0 2px rgba(244, 63, 94, 0.3);
+  transform: translateY(-2px);
+}
+
+.placeorder-right {
+  margin-top: 32px;
+  min-width: 520px;
+  opacity: 0;
+  animation: fadeUpRight 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.placeorder-carttotal {
+  margin-bottom: 48px;
+}
+
+.placeorder-payment {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.placeorder-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media screen and (min-width: 1024px) {
+  .placeorder-methods {
+    flex-direction: row;
+  }
+}
+
+.placeorder-method {
+  display: flex;
+  align-items: center;
+  border: 1px solid #333;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  background: #111;
+  transition: border 0.3s ease, background 0.3s ease, transform 0.3s ease;
+}
+
+.placeorder-method:hover {
+  border-color: #f43f5e;
+  transform: translateY(-2px);
+}
+
+.placeorder-method.selected {
+  border-color: #f43f5e;
+  background: #1a1a1a;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.dot.selected {
+  background-color: #f43f5e;
+  border-color: #f43f5e;
+}
+
+.method-img {
+  height: 22px;
+  margin-left: 12px;
+  filter: invert(1);
+}
+
+.cod-text {
+  color: #aaa;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-left: 12px;
+}
+
+.placeorder-submit {
+  width: 100%;
+  text-align: end;
+  margin-top: 24px;
+}
+
+.submit-btn {
+  background-color: #f43f5e;
+  color: #fff;
+  padding: 14px 48px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #be123c;
+  transform: translateY(-2px);
+}
+
+/* Keyframes for fade animations */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUpLeft {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUpRight {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}

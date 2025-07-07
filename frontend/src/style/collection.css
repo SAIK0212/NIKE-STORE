@@ -1,0 +1,134 @@
+.collection-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  border-top: 2px solid #333; /* Dark subtle line */
+  gap: 1rem;
+  color: #ddd; /* Text color to match hero theme */
+  margin-bottom: 4rem; /* ✅ Added overall bottom margin for the container */
+}
+
+@media (min-width: 640px) {
+  .collection-container {
+    flex-direction: row;
+    gap: 2.5rem;
+  }
+}
+
+.collection-filters {
+  min-width: 220px;
+  background: #111; /* Dark filter panel */
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+  margin-bottom: 4rem; /* ✅ Added gap below filters too */
+}
+
+.filter-header {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: #f43f5e; /* Hero accent */
+}
+
+.filter-dropdown-icon {
+  height: 0.75rem;
+  transition: transform 0.3s;
+}
+
+.filter-dropdown-icon.rotate {
+  transform: rotate(90deg);
+}
+
+.filter-box {
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-top: 1rem;
+  background: #0b0b0b;
+}
+
+.filter-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #fff;
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #bbb;
+}
+
+.filter-options label:hover {
+  color: #f43f5e;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.collection-products {
+  flex: 1;
+  margin-bottom: 4rem; /* ✅ Space below products */
+}
+
+.collection-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.sort-dropdown {
+  border: 1px solid #333;
+  background: #0b0b0b;
+  color: #ddd;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  transition: border 0.3s ease;
+}
+
+.sort-dropdown:hover {
+  border-color: #f43f5e;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.product-grid > * {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.product-grid > *:hover {
+  transform: translateY(-5px);
+  border-color: #f43f5e;
+}

@@ -1,0 +1,131 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 420px;
+  margin: 80px auto;
+  background: #0b0b0b;
+  border: 2px solid #333;
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  gap: 1.5rem;
+  color: #fff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.form-underline {
+  border: none;
+  height: 2px;
+  width: 3rem;
+  background-color: #f43f5e;
+  border-radius: 2px;
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid #333;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+  background: #111;
+  color: #fff;
+  box-sizing: border-box;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #f43f5e;
+  box-shadow: 0 0 0 2px rgba(244, 63, 94, 0.4);
+}
+
+.form-password-container {
+  position: relative;
+  width: 100%;
+}
+
+.form-password-container .form-input {
+  padding-right: 2.5rem;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-password svg {
+  width: 20px;
+  height: 20px;
+  fill: #aaa;
+  transition: fill 0.3s ease;
+}
+
+.toggle-password:hover svg {
+  fill: #f43f5e;
+}
+
+.form-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #bbb;
+  cursor: pointer;
+}
+
+.form-footer p:hover {
+  text-decoration: underline;
+  color: #f43f5e;
+}
+
+.form-button {
+  background: #f43f5e;
+  color: #fff;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  width: 100%;
+}
+
+.form-button:hover {
+  background: #be123c;
+  transform: translateY(-2px);
+}

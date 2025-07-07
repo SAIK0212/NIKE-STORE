@@ -1,0 +1,124 @@
+.about-page {
+  padding: 0 1rem;
+  background: #0b0b0b; /* dark hero background */
+  color: #ddd; /* base light text */
+}
+
+.about-header {
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 3rem;
+  border-top: 2px solid #333;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 3rem 0;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@media (min-width: 768px) {
+  .about-section {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.about-image {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  text-align: justify;
+  color: #bbb;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .about-content {
+    width: 50%;
+  }
+}
+
+.about-subheading {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #f43f5e; /* Hero accent */
+}
+
+.about-why-header {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  text-align: center;
+  color: #fff;
+}
+
+.about-why-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 5rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .about-why-section {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.why-card {
+  border: 1px solid #333;
+  background: #111;
+  text-align: justify;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  color: #ccc;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.why-card:nth-child(1) { animation-delay: 0.4s; }
+.why-card:nth-child(2) { animation-delay: 0.6s; }
+.why-card:nth-child(3) { animation-delay: 0.8s; }
+
+.why-card:hover {
+  transform: translateY(-5px);
+  border-color: #f43f5e; /* hero accent on hover */
+}
+
+.about-newsletter {
+  margin-top: 5rem; /* clean space above subscribe */
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

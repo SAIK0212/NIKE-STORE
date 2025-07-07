@@ -1,0 +1,96 @@
+.footer-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #111;
+  color: #fff;
+  padding: 1.5rem 1rem 0; /* 📏 tighter padding */
+  border-top: 2px solid #333;
+  border-radius: 20px; /* slightly smaller corners */
+  animation: fadeUp 0.8s ease;
+}
+
+.footer-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* tighter spacing */
+  margin: 1.5rem 0;
+  font-size: 0.8rem; /* smaller font */
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; /* balanced proportions */
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+}
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.footer-about {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  margin-bottom: 0.75rem; /* tighter below logo */
+  width: 5rem; /* smaller logo! */
+  filter: brightness(0) invert(1);
+}
+
+.footer-description {
+  color: #bbb;
+  text-align: justify;
+  line-height: 1.4; /* tighter line height */
+  font-size: 0.8rem;
+}
+
+.footer-heading {
+  font-size: 1rem; /* smaller heading */
+  font-weight: 600;
+  margin-bottom: 0.5rem; /* tighter space */
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem; /* tighter gap */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-list li:hover {
+  color: #f43f5e;
+  transform: translateX(3px);
+}
+
+.footer-bottom {
+  margin-top: 1rem;
+}
+
+.footer-bottom hr {
+  border: none;
+  height: 1px;
+  background: #333;
+}
+
+.footer-copy {
+  padding: 0.5rem 0; /* smaller height */
+  text-align: center;
+  font-size: 0.7rem; /* smaller text */
+  background: #000;
+  color: #aaa;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}

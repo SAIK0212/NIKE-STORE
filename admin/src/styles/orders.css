@@ -1,0 +1,118 @@
+.orders-container {
+  padding: 2rem;
+}
+
+.orders-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  text-align: center;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.order-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: start;
+  border: 2px solid #333;
+  border-radius: 20px;
+  padding: 1.5rem;
+  background: #0b0b0b;
+  color: #ddd;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transition: border 0.3s ease, transform 0.3s ease;
+}
+
+.order-card:hover {
+  border-color: #f43f5e;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 640px) {
+  .order-card {
+    grid-template-columns: 0.5fr 2fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .order-card {
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+  }
+}
+
+.order-icon {
+  width: 3rem;
+}
+
+.order-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.order-items {
+  margin-bottom: 0.75rem;
+}
+
+.order-item {
+  padding: 0.25rem 0;
+  font-size: 1rem;
+  color: #eee;
+}
+
+.order-user {
+  font-weight: 500;
+  margin: 0.75rem 0 0.5rem;
+  color: #f43f5e;
+}
+
+.order-address p {
+  margin: 0;
+  color: #bbb;
+}
+
+.order-phone {
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+  color: #ccc;
+}
+
+.order-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.order-method {
+  margin-top: 0.5rem;
+  color: #999;
+}
+
+.order-amount {
+  font-weight: bold;
+  align-self: center;
+  color: #00ff84;
+}
+
+.order-status {
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #111;
+  color: #f43f5e;
+  text-align: center;
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+.order-status:hover {
+  background: #222;
+  border-color: #f43f5e;
+}

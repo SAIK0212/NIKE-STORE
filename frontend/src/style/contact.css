@@ -1,0 +1,73 @@
+.contact-container {
+  padding-top: 2.5rem;
+  border-top: 1px solid #333; /* darker subtle line for dark theme */
+  background: #0b0b0b; /* hero dark base */
+  color: #ddd; /* light text */
+}
+
+.contact-header {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 3rem 0 7rem;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .contact-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.contact-image {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 500px;
+}
+
+.contact-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f43f5e; /* hero accent */
+  margin-bottom: 1rem;
+}
+
+.contact-text {
+  color: #bbb;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contact-button {
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  background-color: #f43f5e; /* hero accent */
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 2rem;
+}
+
+.contact-button:hover {
+  background-color: #be123c; /* darker accent hover */
+  transform: translateY(-2px);
+}

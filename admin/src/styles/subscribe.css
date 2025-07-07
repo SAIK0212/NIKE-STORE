@@ -1,0 +1,123 @@
+.subscribers-container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 2rem;
+  background: rgba(17, 17, 17, 0.7);
+  border: 1px solid #333;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+  color: #ddd;
+  font-family: "Segoe UI", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.subscribers-container::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 180deg, #f43f5e, #be123c, #f43f5e, #0b0b0b);
+  animation: border-rotate 6s linear infinite;
+  z-index: 0;
+}
+
+.subscribers-container::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: #0b0b0b;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.subscribers-container > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes border-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.subscribers-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #f43f5e;
+  padding-bottom: 0.75rem;
+  color: #fff;
+}
+
+.subscribers-empty {
+  text-align: center;
+  font-style: italic;
+  color: #999;
+}
+
+.subscribers-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.subscribers-item {
+  display: flex;
+  align-items: center;
+  background: #111;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #333;
+  transition: background 0.4s ease, transform 0.3s ease, border 0.4s ease;
+}
+
+.subscribers-item svg {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.75rem;
+  fill: #f43f5e;
+  flex-shrink: 0;
+}
+
+.subscribers-item:hover {
+  background: linear-gradient(135deg, #f43f5e 0%, #be123c 100%);
+  color: #fff;
+  transform: translateY(-2px);
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.subscribers-search {
+  display: block;
+  width: 90%;
+  max-width: 100%;
+  padding: 0.75rem 1.25rem;
+  margin: 0 auto 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #333;
+  background: #111;
+  color: #eee;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subscribers-search::placeholder {
+  color: #888;
+}
+
+.subscribers-search:focus {
+  border-color: #f43f5e;
+  box-shadow: 0 0 0 2px rgba(244, 63, 94, 0.3);
+}
+

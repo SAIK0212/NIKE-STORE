@@ -1,0 +1,105 @@
+.nike-hero-container {
+  display: flex;
+  flex-direction: row;
+  background: #111;
+  color: #fff;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.nike-left-panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+}
+
+.nike-product-info {
+  max-width: 400px;
+}
+
+.nike-product-name {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.nike-product-type {
+  font-size: 1.5rem;
+  color: #888;
+}
+
+.nike-price {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.nike-color-options {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.color-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.purple {
+  background: purple;
+}
+
+.red {
+  background: red;
+}
+
+.green {
+  background: green;
+}
+
+.nike-buy-button {
+  background: #e11d48;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.nike-buy-button:hover {
+  background: #be123c;
+}
+
+.nike-right-panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.nike-hero-image {
+  max-width: 90%;
+  transform: rotate(-15deg);
+  transition: opacity 0.5s ease;
+}
+
+.color-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.2s, border 0.2s;
+}
+
+.color-circle.active {
+  border: 2px solid #fff;
+  transform: scale(1.1);
+}
