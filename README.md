@@ -11,4 +11,4 @@ This is a modern full-stack e-commerce web application for Nike apparel and gear
 
 ---
 
-© 2024 Nike Store — Built with ❤️
+© 2025 Nike Store — Built with ❤️
